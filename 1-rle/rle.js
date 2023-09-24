@@ -10,7 +10,7 @@ class MyError extends Error {
 }
 
 const ERROR_MESSAGES = {
-  NO_ARGS: 'Неправильное количество аргументов. Ожидается 3 аргумента: node rle <encode | decode> <inputPath> <output-path>',
+  NO_ARGS: 'Неправильное количество аргументов. Ожидается 3 аргумента: node rle <encode | decode> <input-path> <output-path>',
   INVALID_FN: 'Несуществующий режим работы программы. Ожидается: encode | decode',
   ENOENT: 'Входной файл с таким именем не существует',
 };
@@ -42,8 +42,9 @@ const encode = (input) => {
 };
 
 const decode = (input) => {
-  let i = 0;
   const res = [];
+  let i = 0;
+
   while (i < input.length) {
     if (input[i] === '#') {
       const decodedSequence = Array(input.charCodeAt(i + 1)).fill(input[i + 2]);
@@ -54,6 +55,7 @@ const decode = (input) => {
       i += 1;
     }
   }
+
   const output = res.join('');
   const ratio = input.length / output.length;
   const message = `Файл декодирован.\nКоэффициент сжатия: ${ratio}`;
@@ -91,7 +93,7 @@ try {
 } catch (e) {
   if (e.code in ERROR_MESSAGES) {
     console.error(ERROR_MESSAGES[e.code]);
+  } else {
+    console.error(e);
   }
-
-  console.error(e);
 }
