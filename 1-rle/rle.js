@@ -64,28 +64,6 @@ const decode = (input) => {
 const FunctionsEnum = {
   encode,
   decode,
-  // encodeReduce(input) {
-  //   const inputArray = input.split('');
-  //   inputArray.push(null);
-  //
-  //   const { res } = inputArray.reduce((acc, cur) => {
-  //     if (cur === acc.prev && acc.counter) {
-  //       acc.counter += 1;
-  //       return acc;
-  //     }
-  //
-  //     if (acc.counter > 3 || acc.prev === '#') {
-  //       acc.res = acc.res.concat('#', String.fromCharCode(acc.counter), acc.prev);
-  //     } else {
-  //       acc.res = acc.res.concat(Array(acc.counter).fill(acc.prev));
-  //     }
-  //
-  //     acc.prev = cur;
-  //     acc.counter = 1;
-  //     return acc;
-  //   }, { res: [], prev: null, counter: 0 });
-  //   return res.join('');
-  // },
 };
 
 const rle = (args) => {
