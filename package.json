@@ -11,15 +11,19 @@
     "eslint-plugin-import": "^2.28.1"
   },
   "eslintConfig": {
-    "root": true,
     "extends": [
       "airbnb-base"
     ],
     "env": {
       "node": true
     },
+    "parserOptions": {
+      "ecmaVersion": "latest"
+    },
     "rules": {
-      "no-console": "off"
-    }
+      "no-console": "off",
+      "no-underscore-dangle": "off"
+    },
+    "root": true
   }
 }
