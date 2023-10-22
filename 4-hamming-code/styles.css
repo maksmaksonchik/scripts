@@ -1,0 +1,38 @@
+html {
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 30rem;
+    margin: auto;
+    border: 1px solid #000;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+}
+
+form {
+    margin: 16px;
+}
+
+footer {
+    text-align: center;
+    margin: 32px 0 8px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}

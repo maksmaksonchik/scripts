@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hamming Code</title>
+</head>
+<body>
+<main class="container">
+    <h1>Hamming Code</h1>
+
+    <form>
+        <label for="inputBits">Input message, 4 bits</label>
+        <input type="text" id="inputBits">
+        <button type="submit" id="encodeBtn">Encode</button>
+        <div class="error" id="inputError"></div>
+    </form>
+
+    <form>
+        <label for="encodedBits">Coded message</label>
+        <input type="text" id="encodedBits">
+        <button type="submit" id="decodeBtn">Decode</button>
+        <div class="error" id="encodedError"></div>
+    </form>
+
+    <form>
+        <label for="decodedBits">Decoded message</label>
+        <input type="text" id="decodedBits" readonly>
+        <button type="submit" id="checkBtn">Check</button>
+        <div id="checkResult"></div>
+    </form>
+
+    <footer>© Ефремов Максим, КНМО-101, 2023 год</footer>
+</main>
+
+<script src="./hamming-code.js"></script>
+</body>
+</html>
