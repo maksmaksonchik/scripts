@@ -9,6 +9,10 @@ class CodeTreeNode {
   isLeaf() {
     return !(this.right || this.left);
   }
+
+  static isLeaf(node) {
+    return !(node.right || node.left);
+  }
 }
 
 module.exports = { CodeTreeNode };

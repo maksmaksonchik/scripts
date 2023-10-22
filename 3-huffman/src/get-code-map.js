@@ -1,5 +1,3 @@
-const { getCodeTree } = require('./get-code-tree');
-
 const traverseTree = (tree, path) => {
   if (tree.isLeaf()) {
     return { [tree.char]: path || '0' };
@@ -11,10 +9,6 @@ const traverseTree = (tree, path) => {
   };
 };
 
-const getCodeMap = (str) => {
-  const codeTree = getCodeTree(str);
-
-  return traverseTree(codeTree, '');
-};
+const getCodeMap = (codeTree) => traverseTree(codeTree, '');
 
 module.exports = { getCodeMap };
